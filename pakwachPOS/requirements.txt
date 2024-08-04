@@ -72,7 +72,7 @@ requests==2.22.0
 requests-toolbelt==0.8.0
 rsa==4.9
 # Editable install with no version control (sample-python-calculator==1.0.0)
--e /Users/maliabupatricia/Downloads/devskiller-code-G723-HQRG-QRWH-S2F
+# -e /Users/maliabupatricia/Downloads/devskiller-code-G723-HQRG-QRWH-S2F
 service-identity==23.1.0
 simplejson==3.19.2
 six==1.14.0

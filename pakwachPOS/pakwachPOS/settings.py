@@ -94,8 +94,19 @@ DATABASES = {
         "USER": "root",
         "PASSWORD": "root",
         "HOST": "127.0.0.1",
-        "PORT": "3306",
-    },
+        "PORT": "3306", 
+    }
+    # "default": {
+    #     "ENGINE": "django.db.backends.mysql",
+    #     "OPTIONS": {
+    #         "init_command": "ALTER DATABASE pakwach_pos CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci",
+    #     },
+    #     "NAME": "pakwachfm_pos",
+    #     "USER": "pakwachfm",
+    #     "PASSWORD": "w9E5Tws?=yQ0",
+    #     "HOST": "127.0.0.1",
+    #     "PORT": "3306",
+    # },
 }
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
