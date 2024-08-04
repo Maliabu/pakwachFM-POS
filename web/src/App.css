@@ -1,0 +1,153 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.receipt-no{
+  font-family: 'Courier New', Courier, monospace !important;
+  color: firebrick !important;
+  font-weight: 900 !important;
+}
+.core{
+  height: 100vh;
+  width: 100% !important;
+}
+.nav-b{
+  background-image: url("images/card.jpeg");
+  color: whitesmoke !important;
+  background-size: cover !important;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 150vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.light-home{
+  background-color: rgba(0, 0, 0, 0.259);
+}
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.home{
+  background-color: rgb(255, 255, 255) !important;
+}
+.home1{
+  background-color: rgba(6, 6, 6, 0.054) !important;
+}
+.main{
+  padding: 8% 8% 0 8% !important;
+}
+.login{
+  padding: 5% 30% !important;
+}
+.bbutton:hover{
+  background-color: rgb(250, 250, 250) !important;
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 250ms ease-in-out;
+}
+.cursor{
+  cursor: pointer !important;
+}
+.bolder{
+  font-weight: bolder;
+}
+.active{
+  color: #ffffff !important;
+  /* background-color: #F26425; */
+  background-color: firebrick;
+  border-radius: 5px;
+}
+.inactive{
+  background: none !important;
+  border: none !important;
+  color: firebrick !important;
+}
+a{
+  color: black !important;
+  text-decoration: none !important;
+}
+p{
+  font-size: small !important;
+  font-weight: 400 !important;
+}
+.PhoneInputCountryIcon{
+  padding: 2% !important;
+  width: 15% !important;
+  height: 15% !important;
+}
+/* .btn.btn-outline-dark.btn-small{} */
+.my-modal1{
+  background-color: rgb(230, 230, 230) !important;
+}
+.modal-content{
+  background-color: rgb(230, 230, 230) !important;
+  border: none !important;
+}
+.modal-content p {
+  font-size: smaller !important;
+  margin-bottom: 0px !important;
+}
+.scroll-y {
+    overflow-y: auto !important;
+    scroll-behavior: smooth !important;
+    position: relative !important;
+    height: 65vh !important;
+}
+.border-more{
+  border-bottom: 5px solid rgb(208, 207, 207);
+}
+.nav-bottom{
+  position: fixed !important;
+  bottom: 0% !important;
+  z-index: 1 !important;
+  background-color: #181b20 !important;
+  
+}
+.nav-top-sm{
+  position: fixed !important;
+  top: 0% !important;
+  z-index: 1 !important;
+  
+}
+.scroll-sm {
+  overflow-y: auto !important;
+  scroll-behavior: smooth !important;
+  height: 100vh !important;
+}
+input{
+  border: 1px solid black !important;
+}
+.login-1{
+  background-image: url("images/login.jpeg");
+  background-size: 55%;
+  background-repeat: no-repeat;
+  background-position: 80%;
+}
+.danger{
+  background-color: firebrick !important;
+}
