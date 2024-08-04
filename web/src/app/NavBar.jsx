@@ -29,7 +29,9 @@ export default function NavBar(props){
     },[])
     function status(){
       let theStatus = localStorage.getItem('status')
-      if(username !== undefined){
+      if(username === undefined){
+        return null}
+        else{
         if(theStatus === "available"){
             return cart.length
         } else {
