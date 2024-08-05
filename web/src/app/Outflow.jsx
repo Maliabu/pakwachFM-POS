@@ -87,7 +87,7 @@ const handleSubmit = (e) => {
             fail("Unsuccessful")
         }
         else if(response){
-            success("Products now in Cart", "/cart", "successful")
+            success("Products now in Cart", "/pos/cart", "successful")
         }
     })
 }
@@ -112,7 +112,7 @@ let count = 1
         <div className="">
         <NavBar username={username} profile_picture={profilePicture}/>
         <div className="d-flex flex-row px-lg-5 p-3 mt-3">
-                <Link to="/inflow"><Button variant="outline-dark" size="sm">Inflow Cash</Button></Link>
+                <Link to="/pos/inflow"><Button variant="outline-dark" size="sm">Inflow Cash</Button></Link>
             </div>
                     <h4 className="m-lg-5 my-5 p-3 bolder">Outflow Cash</h4>
                     <Form className="m-lg-5 p-3" id="form1" onSubmit={handleSubmit}>

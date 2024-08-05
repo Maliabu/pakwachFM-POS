@@ -35,43 +35,43 @@ export default function App() {
                 <Router>
                     <Routes>
                         <Route
-                            path="/"
+                            path="/pos/home"
                             element={<Home />}
                         ></Route>
                         <Route
-                            path="/login"
+                            path="/pos"
                             element={<Login />}
                         ></Route>
                         <Route
-                            path="/logout"
+                            path="/pos/logout"
                             element={<Logout />}
                         ></Route>
                         <Route
-                            path="/inflow"
+                            path="/pos/inflow"
                             element={<Inflow />}
                         ></Route>
                         <Route
-                            path="/outflow"
+                            path="/pos/outflow"
                             element={<Outflow />}
                         ></Route>
                         <Route
-                            path="/receipts"
+                            path="/pos/receipts"
                             element={<Receipts pdf={Adobe}/>}
                         ></Route>
                         <Route
-                            path="/reports"
+                            path="/pos/reports"
                             element={<Reports />}
                         ></Route>
                         <Route
-                            path="/staff"
+                            path="/pos/staff"
                             element={<Staff />}
                         ></Route>
                         <Route
-                            path="/cart"
+                            path="/pos/cart"
                             element={<Cart />}
                         ></Route>
                         <Route
-                            path="/contact"
+                            path="/pos/contact"
                             element={<Contact />}
                         ></Route>
                     </Routes>

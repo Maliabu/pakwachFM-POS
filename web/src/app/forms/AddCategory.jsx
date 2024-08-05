@@ -29,7 +29,7 @@ export default function AddCategory(){
                 fail("Unsuccessful")
             }
             else if(response){
-                success("Category added successfully", "/inflow", "successful")
+                success("Category added successfully", "/pos/inflow", "successful")
             }
         })
     }

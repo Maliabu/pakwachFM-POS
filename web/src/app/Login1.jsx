@@ -26,7 +26,7 @@ export default function Login(){
             } else if (response.status === 200 && response.data.success === false) {
                 fail(response.data.message)
             } else {
-                success("A verification link has been sent to your email", "/", "Successful");
+                success("A verification link has been sent to your email", "/pos/home", "Successful");
             }
         })
     }
@@ -87,7 +87,7 @@ export default function Login(){
                                 } else if (response.status === 200 && response.data.success === false) {
                                     fail(response.data.message)
                                 } else {
-                                    success("Login successful", "/", "successful");
+                                    success("Login successful", "/pos/home", "successful");
                                     const token = response.data.token
                                     localStorage.setItem('token', token)
                                 }
@@ -99,11 +99,11 @@ export default function Login(){
     }
     return(
         <div className="m-2">
-            <div className="text-center p-5 rounded-4">
+            <div className="text-center p-lg-5 rounded-4">
                 <Form onSubmit = { handleSubmit }>
                 <h2>Sign In</h2>
-                <Form.Group className = " rounded-2 px-3 text-start" >
-                <Form.Label > <h6 className = 'm-0'> Email </h6> </Form.Label> 
+                <Form.Group className = "rounded-2 px-3 text-start" >
+                <Form.Label> <h6 className = 'm-0'> Email </h6> </Form.Label> 
                 <Form.Control type = "text"
                     id = 'username'
                     required = "required"

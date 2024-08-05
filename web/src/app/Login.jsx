@@ -1,11 +1,11 @@
 import React, {useState} from "react"
-import {Home, User} from 'react-iconly'
-import { Link } from "react-router-dom";
 import Form from 'react-bootstrap/Form'
 import axios from "axios";
 import { catch_errors, fail, success, preloader, togglePasswordVisibility } from "./api/RequestFunctions";
 import { API_RESEND_VERIFICATION_EMAIL,API_URL_GET_AUTH_USER_BY_EMAIL,API_EMAIL_VERIFY,API_URL_LOGIN } from "./api/Api";
 import Button from "react-bootstrap/Button";
+import NavBar from "./NavBar";
+import Pos from '../images/login.jpeg'
 
 export default function Login(){
     const [formData, setFormData] = useState({
@@ -28,7 +28,7 @@ export default function Login(){
             } else if (response.status === 200 && response.data.success === false) {
                 fail(response.data.message)
             } else {
-                success("A verification link has been sent to your email", "/", "Successful");
+                success("A verification link has been sent to your email", "/pos/home", "Successful");
             }
         })
     }
@@ -89,7 +89,7 @@ export default function Login(){
                                 } else if (response.status === 200 && response.data.success === false) {
                                     fail(response.data.message)
                                 } else {
-                                    success("Login successful", "/", "successful");
+                                    success("Login successful", "/pos/home", "successful");
                                     const token = response.data.token
                                     localStorage.setItem('token', token)
                                 }
@@ -100,26 +100,15 @@ export default function Login(){
         })
     }
     return(
-        <div className="mx-lg-5 home">
-            <div className="p-3 row">
-            <div className="col-lg-6 col-10 cursor">
-                <Link to="/"><h6><Home size={20} className="mx-3"/></h6></Link>
-            </div>
-            <div className="col-lg-4 col-2">
-                <h6><User/></h6>
-            </div>
-            <div className="col-2 d-none d-lg-block d-md-block">
-            <div className="d-flex flex-row justify-content-center">
-            <Link to="/contact"><Button size="sm" variant="outline-dark">Sign Up</Button></Link>
-                <h6 className="mx-2 home1 d-none rounded-3 p-2 px-3 bbutton">SIGN UP</h6>
-            </div>
-            </div>
-        </div>
-            <div className="login text-center d-none d-md-block d-lg-block home1">
-                <Form onSubmit = { handleSubmit }>
-                <h2>Login</h2>
-                <Form.Group className = " rounded-2 px-3 text-start" >
-                <Form.Label > <h6 className = 'm-0'> Email </h6> </Form.Label> 
+        <div className="scroll-sm">
+        <NavBar/>
+        <div className="row">
+            <div className="col-lg-6">
+            <div className="text-center pt-5 mt-5 rounded-4">
+                <Form onSubmit = { handleSubmit } className="p-lg-0 pt-5">
+                <h2>Sign In</h2>
+                <Form.Group className = "rounded-2 px-3 text-start" >
+                <Form.Label> <h6 className = 'm-0'> Email </h6> </Form.Label> 
                 <Form.Control type = "text"
                     id = 'username'
                     required = "required"
@@ -136,19 +125,19 @@ export default function Login(){
                 <div className='my-1' key = "default-checkbox" >
                 <Form.Check type='checkbox' id = "default-checkbox" label='Show Password' onClick={togglePasswordVisibility}/></div>
                 </Form.Group>
-                <Button type='submit' id="successMessage" variant="outline-dark" size="sm" className="px-5">Login</Button>
-                <h6 id = "errorMessage" className = 'py-2 mt-3 rounded border border-danger text-center fade-in'
+                <Button type='submit' id="successMessage" variant="danger" size="sm" className="px-5 mt-5">Sign in</Button>
+                <h6 id = "errorMessage" className = 'py-2 mx-3 my-1 rounded border border-danger text-center fade-in'
                     style = {
                     { display: 'none' }
                     }> hey </h6>
                 <h6 id = "infoMessage"
-                    className = 'py-2 mt-3 rounded warning-message text-center fade-in'
+                    className = 'py-2 mx-3 my-1 rounded warning-message text-center fade-in'
                     style = {
                     { display: 'none',
                         border: '1px solid black' }
                     }> hey </h6>
                 <span id = "infoMess"
-                    className = 'active bolder status rounded p-2 mt-1'
+                    className = 'active bolder status rounded p-2 m-t'
                     style = {
                     { display: 'none',
                         borderColor: 'black'
@@ -157,36 +146,10 @@ export default function Login(){
                     onClick={resendEmail}> Resend email verification link </span>
                 </Form>
             </div>
-            <div className=" text-center d-block d-md-none d-lg-none">
-                <Form onSubmit = { handleSubmit }>
-                <h2 className="mt-5">Login</h2>
-                <Form.Group className = " rounded-2 px-3 text-start" >
-                <Form.Label > <h6 className = 'm-0'> Email </h6> </Form.Label> 
-                <Form.Control type = "text"
-                    id = 'username'
-                    required = "required"
-                    onChange = { handleEmailChange }
-                    placeholder = "username@pakwachfm.com" /> 
-                </Form.Group>
-                <Form.Group className = " rounded-2 px-3 my-2 text-start" >
-                <Form.Label > <h6 className = 'm-0' > Password </h6> </Form.Label> 
-                <Form.Control type = "password"
-                    id = 'password'
-                    required = "required"
-                    onChange = { handleChange }
-                    placeholder = "password" />
-                </Form.Group>
-                <Button type='submit' variant="danger" size="sm">Sign In</Button>
-                <h6 id = "errorMessage" className = 'py-2 mt-3 rounded border border-danger text-center fade-in'
-                    style = {
-                    { display: 'none' }
-                    }> hey </h6>
-                <h6 id = "infoMessage"
-                    className = 'py-2 mt-3 rounded warning-message text-center fade-in'
-                    style = {
-                    { display: 'none' }
-                    }> hey </h6>
-                </Form>
+                </div>
+                <div className="col-lg-6 col-12">
+                    <img src={Pos} alt="pos" width="100%"/>
+                </div>
             </div>
         </div>
     )

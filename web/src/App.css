@@ -140,13 +140,22 @@ p{
   height: 100vh !important;
 }
 input{
-  border: 1px solid black !important;
+  border: 1px solid rgba(0, 0, 0, 0.083) !important;
+  background-color: #181b2018 !important;
+  color: #181b20 !important;
 }
 .login-1{
   background-image: url("images/login.jpeg");
   background-size: 55%;
   background-repeat: no-repeat;
   background-position: 80%;
+}
+.login-2{
+  background-image: url("images/pos.jpeg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-position: right;
 }
 .danger{
   background-color: firebrick !important;

@@ -79,7 +79,7 @@ export default function Cart(){
           fail("Unsuccessful")
       }
       else if(response){
-        success("Receipt done", "/receipts", "successful")
+        success("Receipt done", "/pos/receipts", "successful")
       }
     })
   }
@@ -94,7 +94,7 @@ export default function Cart(){
     .then(function(response){
       if(response){
         preloaderCartDelete(preloadName)
-        success2("/cart")
+        success2("/pos/cart")
       }
     })
   }
@@ -141,8 +141,8 @@ export default function Cart(){
         <div className="d-flex flex-row px-lg-5 px-3 mt-3">
         <h2 className="">Cart</h2>
         <div className="d-flex felx-row justify-content-end mx-lg-5 mx-3">
-            <Link to="/inflow"><Button variant="outline-dark" size="sm">Inflow Cash</Button></Link>
-            <Link to="/outflow"><Button variant="outline-dark" size="sm" className="mx-2">Outflow Cash</Button></Link></div>
+            <Link to="/pos/inflow"><Button variant="outline-dark" size="sm">Inflow Cash</Button></Link>
+            <Link to="/pos/outflow"><Button variant="outline-dark" size="sm" className="mx-2">Outflow Cash</Button></Link></div>
             </div>
             <h6 id = "deleteMessage" className = 'p-2 mx-5 text-end rounded text-dark fade-in'
                     style = {

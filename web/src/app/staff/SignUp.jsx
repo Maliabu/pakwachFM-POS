@@ -244,7 +244,7 @@ function SignUp(props) {
                     } else if (response.status === 200 && response.data.success === false) {
                         fail(response.data.message)
                     } else {
-                        success("A verification link has been sent to your email", "/staff", "successful");
+                        success("A verification link has been sent to your email", "/pos/staff", "successful");
                     }
                 });
         }

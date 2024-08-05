@@ -31,28 +31,28 @@ export default function Home(){
     }
     const checkToShow = () => {
         if(TOKEN === null){
-            return (<Login/>)
+            return window.location.pathname = "/pos/logout"
         } else {
             return (
                 <div>
                 <div className=" d-none d-d-md-block d-lg-block">
                 <div className="row g-2">
                     <div className="col-4">
-                    <Link to="/inflow"><Button variant="outline-dark" className="w-100"><Heart size={50} set="broken" className="p-2 rounded"/><br/> INFLOW </Button></Link>
+                    <Link to="/pos/inflow"><Button variant="outline-dark" className="w-100"><Heart size={50} set="broken" className="p-2 rounded"/><br/> INFLOW </Button></Link>
                     </div>
                     <div className="col-4">
-                    <Link to="/outflow"><Button variant="outline-dark" className="w-100"><Heart2 size={50} set="broken" className="p-2 rounded"/><br/>OUTFLOW</Button></Link>
+                    <Link to="/pos/outflow"><Button variant="outline-dark" className="w-100"><Heart2 size={50} set="broken" className="p-2 rounded"/><br/>OUTFLOW</Button></Link>
                     </div>
                     <div className="col-4">
-                    <Link to="/staff"><Button variant="outline-dark" className="w-100"><People size={50} set="broken" className="p-2 rounded"/><br/>STAFF</Button></Link>
+                    <Link to="/pos/staff"><Button variant="outline-dark" className="w-100"><People size={50} set="broken" className="p-2 rounded"/><br/>STAFF</Button></Link>
                     </div>
                 </div>
                 <div className="row mt-2 g-2">
                     <div className="col-4">
-                    <Link to="/reports"><Button variant="outline-dark" className="w-100"><Paper size={50} set="broken" className="p-2 rounded"/><br/> REPORTS </Button></Link>
+                    <Link to="/pos/reports"><Button variant="outline-dark" className="w-100"><Paper size={50} set="broken" className="p-2 rounded"/><br/> REPORTS </Button></Link>
                     </div>
                     <div className="col-4">
-                    <Link to="/receipts"><Button variant="outline-dark" className="w-100"><PaperDownload size={50} set="broken" className="p-2 rounded"/><br/>RECEIPTS</Button></Link>
+                    <Link to="/pos/receipts"><Button variant="outline-dark" className="w-100"><PaperDownload size={50} set="broken" className="p-2 rounded"/><br/>RECEIPTS</Button></Link>
                     </div>
                 </div>
                 <div className="d-flex flex-row mt-3">
@@ -62,21 +62,21 @@ export default function Home(){
                 <div className="d-sm-block d-md-none d-lg-none">
                 <div className="row g-2 mt-4 justify-content-center">
                     <div className="col-3">
-                    <Link to="/inflow"><Button variant="outline-dark" className="w-100"><Heart size={35} set="broken" className="p-2 rounded"/><br/> <h6 className="small">INFLOW</h6></Button></Link>
+                    <Link to="/pos/inflow"><Button variant="outline-dark" className="w-100"><Heart size={35} set="broken" className="p-2 rounded"/><br/> <h6 className="small">INFLOW</h6></Button></Link>
                     </div>
                     <div className="col-4">
-                    <Link to="/outflow"><Button variant="outline-dark" className="w-100"><Heart2 size={35} set="broken" className="p-2 rounded"/><br/> <h6 className="small">OUTFLOW</h6></Button></Link>
+                    <Link to="/pos/outflow"><Button variant="outline-dark" className="w-100"><Heart2 size={35} set="broken" className="p-2 rounded"/><br/> <h6 className="small">OUTFLOW</h6></Button></Link>
                     </div>
                     <div className="col-3">
-                    <Link to="/staff"><Button variant="outline-dark" className="w-100"><People size={35} set="broken" className="p-2 rounded"/><br/> <h6 className="small">STAFF</h6></Button></Link>
+                    <Link to="/pos/staff"><Button variant="outline-dark" className="w-100"><People size={35} set="broken" className="p-2 rounded"/><br/> <h6 className="small">STAFF</h6></Button></Link>
                     </div>
                 </div>
                 <div className="row mt-1 mb-5 g-2 justify-content-center">
                     <div className="col-4">
-                    <Link to="/reports"><Button variant="outline-dark" className="w-100"><Paper size={35} set="broken" className="p-2 rounded"/><br/> REPORTS </Button></Link>
+                    <Link to="/pos/reports"><Button variant="outline-dark" className="w-100"><Paper size={35} set="broken" className="p-2 rounded"/><br/> REPORTS </Button></Link>
                     </div>
                     <div className="col-4">
-                    <Link to="/receipts"><Button variant="outline-dark" className="w-100"><PaperDownload size={35} set="broken" className="p-2 rounded"/><br/>RECEIPTS</Button></Link>
+                    <Link to="/pos/receipts"><Button variant="outline-dark" className="w-100"><PaperDownload size={35} set="broken" className="p-2 rounded"/><br/>RECEIPTS</Button></Link>
                     </div>
                 </div>
                 <div className="d-flex flex-row mt-3 justify-content-center">
@@ -89,7 +89,7 @@ export default function Home(){
     }
     function logged(){
         if(TOKEN === null){
-            return null
+            return window.location.pathname = "/pos/logout"
         } else {
             return (
                 <Statistics/>

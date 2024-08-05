@@ -35,7 +35,7 @@ class Photo extends React.Component {
                 } else if (response.data.success === false) {
                     fail(response.data.message)
                 } else {
-                    success("You have successfully edited your profile photo", "/staff", "successful");
+                    success("You have successfully edited your profile photo", "/pos/staff", "successful");
                 }
             });
     }

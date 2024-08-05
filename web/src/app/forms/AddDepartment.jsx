@@ -29,7 +29,7 @@ export default function AddDepartment(){
                 fail("Unsuccessful")
             }
             else if(response){
-                success("Department added successfully", "/staff", "successful")
+                success("Department added successfully", "/pos/staff", "successful")
             }
         })
     }

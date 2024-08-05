@@ -70,7 +70,7 @@ export default function Inflow(props){
         <div className="">
         <NavBar username={username} profile_picture={profilePicture}/>
         <div className="d-flex flex-row px-5 mt-3">
-                <Link to="/outflow"><Button variant="outline-dark" size="sm">Outflow Cash</Button></Link>
+                <Link to="/pos/outflow"><Button variant="outline-dark" size="sm">Outflow Cash</Button></Link>
             </div>
         <div className="row px-lg-5 p-3">
             <div className="col-2">

@@ -192,8 +192,8 @@ export default function Staff(props){
         <div className=" d-none d-md-block d-lg-block">
         <div className="row px-lg-5 p-3">
             <div className="col-lg-2">
-                <Link to="/inflow"><Button variant="outline-dark" size="sm">Inflow Cash</Button></Link>
-                <Link to="/outflow"><Button className="my-2" variant="outline-dark" size="sm">Outflow Cash</Button></Link>
+                <Link to="/pos/inflow"><Button variant="outline-dark" size="sm">Inflow Cash</Button></Link>
+                <Link to="/pos/outflow"><Button className="my-2" variant="outline-dark" size="sm">Outflow Cash</Button></Link>
                 <h4 className="bolder my-5">Staff & Payroll</h4>
                 <div>
                     <TabNavItem 

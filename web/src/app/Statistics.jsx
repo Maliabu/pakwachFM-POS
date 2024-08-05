@@ -66,7 +66,6 @@ export default function Statistics(){
     total += yearData.total
     });
     const result = groupedData !== undefined? Object.values(groupedData) : [];
-    console.log(result)
     const totalSales = {
         options: {
             chart: {

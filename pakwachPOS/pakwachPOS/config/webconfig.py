@@ -5,8 +5,8 @@ from django.utils import timezone
 # API_URL  = "http://127.0.0.1:8000/api/v1/" if IS_LOCAL_HOST else "https://server.cyanase.app/api/v1/"
 # BASE_URL = "http://127.0.0.1:8000/" if IS_LOCAL_HOST else "https://server.cyanase.app/"
 
-API_URL  = "http://127.0.0.1:8000/pakwachPOS/"
-BASE_URL = "http://127.0.0.1:8000/"
+API_URL  = "https://pakwachfm.com/server/"
+BASE_URL = "https://pakwachfm.com/server/"
 
 ID_ENCRYPTION_KEY = "ADB-KJQ-FZY-TQYJ"
 

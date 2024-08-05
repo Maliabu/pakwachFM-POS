@@ -76,7 +76,7 @@ export default function TalkShows(props){
                 fail("Unsuccessful")
             }
             else if(response){
-                success("Products now in Cart", "/cart", "successful")
+                success("Products now in Cart", "/pos/cart", "successful")
             }
         })
     }
